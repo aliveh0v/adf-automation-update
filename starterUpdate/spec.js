@@ -51,8 +51,12 @@ describe('ADF Demo App', function() {
         element(by.css('#document-list-container > adf-upload-drag-area > div > adf-toolbar > mat-toolbar > div > button:nth-child(2)')).click();
         element(by.css('#adf-folder-name-input')).sendKeys(gitHubId);
         element(by.css('#adf-folder-create-button > span')).click();
+        
+        var checkMsg = element(by.className('cdk-overlay-pane'));
+        expect(checkMsg.isPresent()).toBeTruthy();
         browser.sleep(2000);
        
+        
             
     });
 
